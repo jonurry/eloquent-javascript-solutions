@@ -1,0 +1,2 @@
+"use strict";function renderGists(r){var t=!0,n=!1,o=void 0;try{for(var e=r[Symbol.iterator](),i;!(t=(i=e.next()).done);t=!0){var c=i.value;document.write("<p>"+c.id+"</p>"),console.log(c.comments_url)}}catch(r){n=!0,o=r}finally{try{!t&&e.return&&e.return()}finally{if(n)throw o}}}var myCodeMirror=CodeMirror(document.body,{value:"function myScript(){return 100;}\n",mode:"javascript"});fetch("https://api.github.com/users/jonurry/gists").then(function(r){return r.json()}).then(function(r){renderGists(r)}).catch(function(r){console.log(r)});
+//# sourceMappingURL=./app.js.map
