@@ -4,8 +4,6 @@ function createCodeElement(gist) {
   let solutionsElement = document.getElementById('solutions');
   let newElement = solutionsElement.appendChild(document.createElement('div'));
   newElement.setAttribute('id', gist.id);
-  let h1 = newElement.appendChild(document.createElement('h1'));
-  h1.innerHTML = gist.description;
   return newElement;
 }
 
@@ -41,7 +39,13 @@ async function renderComments(comments, id) {
 
 async function render() {
   try {
+    // get all of my code gists from github
     let gists = await apiGetJson(gistsURL);
+    gists.sort((a, b) => {
+      if (a.description < b.description) return -1;
+      if (a.description > b.description) return 1;
+      return 0;
+    });
     for (let gist of gists) {
       let e = createCodeElement(gist);
       let codeURL = gist.files[Object.keys(gist.files)[0]].raw_url;

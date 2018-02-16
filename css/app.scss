@@ -1,1 +1,10 @@
+@import 'typography';
 @import 'github-gist';
+p {
+  line-height: 1.618rem;
+}
+p code {
+  background-color: #a71d5d2c;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+}

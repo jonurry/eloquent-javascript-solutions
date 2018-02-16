@@ -35,6 +35,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/typography.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/docs\/css\/typography.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/docs": {
 		"ft": 65536,
 		"oA": 1,
@@ -86,7 +99,7 @@
 	"displayValue": "eloquent-javascript-solutions",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_orange",
-	"lastBuiltDate": 540402066
+	"lastBuiltDate": 540484402
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
