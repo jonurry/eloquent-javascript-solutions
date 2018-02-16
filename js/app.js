@@ -18,6 +18,9 @@ async function apiGetText(url) {
 async function renderCode(code, element) {
   element.innerHTML = marked('```js\n' + code + '\n```');
   hljs.highlightBlock(element.firstChild.firstChild);
+  let h2 = document.createElement('h3');
+  h2.innerHTML = 'Solution';
+  element.prepend(h2);
 }
 
 async function renderComments(comments, id) {
@@ -41,6 +44,11 @@ async function render() {
   try {
     // get all of my code gists from github
     let gists = await apiGetJson(gistsURL);
+    // only keep gists relating to (Eloquent JavaScript Solutions)
+    gists.filter(a =>
+      a.description.includes('(Eloquent JavaScript Solutions)')
+    );
+    // sort the remaining gists by exercise number
     gists.sort((a, b) => {
       if (a.description < b.description) return -1;
       if (a.description > b.description) return 1;
