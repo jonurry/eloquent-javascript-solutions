@@ -12,9 +12,9 @@
 	"\/CNAME": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/docs\/CNAME",
-		"oF": 0
+		"oF": 1
 		},
 	"\/css\/app.scss": {
 		"aP": 1,
