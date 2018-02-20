@@ -1,14 +1,11 @@
+// @codekit-prepend "polyfills.js";
+
+// Globals
 const gistsURL = 'https://api.github.com/users/jonurry/gists';
 let gists = {};
 let currentChapter = 2;
 
-function createCodeElement(gist) {
-  let solutionsElement = document.getElementById('solutions');
-  let newElement = solutionsElement.appendChild(document.createElement('div'));
-  newElement.setAttribute('id', gist.id);
-  return newElement;
-}
-
+// api
 async function apiGetJson(url) {
   return await (await fetch(url)).json();
 }
@@ -17,73 +14,121 @@ async function apiGetText(url) {
   return await (await fetch(url)).text();
 }
 
-async function renderCode(code, element) {
-  element.innerHTML = marked('```js\n' + code + '\n```');
-  hljs.highlightBlock(element.firstChild.firstChild);
-  let h2 = document.createElement('h3');
-  h2.innerHTML = 'Solution';
-  element.prepend(h2);
+// view
+function getElementById(id) {
+  return document.getElementById(id);
 }
 
-async function renderComments(comments, id) {
+function getElementsByTagName(tag) {
+  return document.getElementsByTagName(tag);
+}
+
+function createElement(elementType, id = '', content = '') {
+  let element = document.createElement(elementType);
+  if (id !== '') {
+    element.setAttribute('id', id);
+  }
+  if (content !== '') {
+    element.innerHTML = content;
+  }
+  return element;
+}
+
+function appendElement(parent, child) {
+  return parent.appendChild(child);
+}
+
+function prependElement(e1, e2) {
+  e1.prepend(e2);
+}
+
+function renderEmptyElement(e) {
+  e.innerHTML = '';
+}
+
+function renderCode(gistElement, files) {
+  for (let key of Object.keys(files)) {
+    let fileElement = createElement(
+      'div',
+      files[key].filename,
+      marked('```js\n' + files[key].raw_code + '\n```')
+    );
+    appendElement(gistElement, fileElement);
+    hljs.highlightBlock(fileElement.firstChild.firstChild);
+  }
+}
+
+function renderComments(gistElement, comments) {
   let first = true;
   for (let comment of comments) {
-    let commentElement;
-    let gistElement = document.getElementById(id);
+    let commentElement = createElement('div', comment.id, marked(comment.body));
     if (first) {
-      gistElement.prepend(document.createElement('div'));
-      commentElement = gistElement.firstChild;
+      prependElement(gistElement, commentElement);
       first = false;
     } else {
-      commentElement = gistElement.appendChild(document.createElement('div'));
+      appendElement(gistElement, commentElement);
     }
-    commentElement.setAttribute('id', comment.id);
-    commentElement.innerHTML = marked(comment.body);
   }
 }
 
-async function renderChapter(chapter, menuToggle = true) {
-  document.getElementById('solutions').innerHTML = '';
-  let chapterGists = gists.filter(a => 
-    a.description.substring(0, a.description.indexOf('.')) == chapter
-  );
-  for (let gist of chapterGists) {
-    let e = createCodeElement(gist);
-    let codeURL = gist.files[Object.keys(gist.files)[0]].raw_url;
-    let code = await apiGetText(codeURL);
-    await renderCode(code, e);
+function clearSolution() {
+  let solutionElement = getElementById('solutions');
+  renderEmptyElement(solutionElement);
+  return solutionElement;
+}
+
+async function renderChapter(gists) {
+  let solutionElement = clearSolution();
+  for (let gist of gists) {
+    let gistElement = createElement('div', gist.id);
+    appendElement(solutionElement, gistElement);
+    renderCode(gistElement, gist.files);
+    prependElement(gistElement, createElement('h3', '', 'Solution'));
     if (gist.comments > 0) {
-      let comments = await apiGetJson(gist.comments_url);
-      await renderComments(comments, gist.id);
+      renderComments(gistElement, gist.raw_comments);
     }
   }
-  if (currentChapter !== chapter) {
-    document.getElementById('nav-chapter-' + currentChapter).classList.remove('active');
-    document.getElementById('nav-chapter-' + chapter).classList.add('active');
-    currentChapter = chapter;
-  }
-  if (menuToggle) {
-    toggleMenu();
-  };
 }
 
-async function enableChaptersMenu() {
+async function enableMenu(gists) {
   let chapterRef = 0;
   for (let gist of gists) {
     let chapter = gist.description.substring(0, gist.description.indexOf('.'));
     if (chapter != chapterRef) {
-      let menuElement = document.getElementById('nav-chapter-' + chapter);
+      let menuElement = getElementById('nav-chapter-' + chapter);
       menuElement.classList.remove('inactive');
-      menuElement.onclick = function() {renderChapter(chapter);};
+      menuElement.onclick = function() {
+        loadChapter(chapter);
+      };
       chapterRef = chapter;
     }
   }
 }
 
-async function render() {
+function updateActiveMenuItem(currentChapter, chapter) {
+  if (currentChapter !== chapter) {
+    getElementById('nav-chapter-' + currentChapter).classList.remove('active');
+    getElementById('nav-chapter-' + chapter).classList.add('active');
+  }
+}
+
+function toggleMenu() {
+  getElementsByTagName('nav')[0].classList.toggle('collapsed');
+}
+
+function toggleWaiting(state) {
+  if (state === 'on') {
+    getElementById('waiting').classList.remove('hidden');
+  } else {
+    getElementById('waiting').classList.add('hidden');
+  }
+}
+
+// model - load gists
+async function getGists(url) {
   try {
     // get all of my code gists from github
-    gists = await apiGetJson(gistsURL);
+    let gists = await apiGetJson(url);
     // only keep gists relating to (Eloquent JavaScript Solutions)
     gists = gists.filter(a =>
       a.description.includes('(Eloquent JavaScript Solutions)')
@@ -94,17 +139,52 @@ async function render() {
       if (a.description > b.description) return 1;
       return 0;
     });
-    enableChaptersMenu();
-    renderChapter(currentChapter, false);
+    return gists;
   } catch (error) {
     console.log(error.message);
   }
 }
 
-(async () => {
-  await render();
-})();
-
-function toggleMenu() {
-  document.getElementsByTagName('nav')[0].classList.toggle('collapsed');
+async function loadChapter(chapter, menuToggle = true) {
+  toggleWaiting('on');
+  clearSolution();
+  updateActiveMenuItem(currentChapter, chapter);
+  if (menuToggle) {
+    toggleMenu();
+  }
+  await getCodeAndComments(gists, chapter);
+  renderChapter(prepareChapterGists(gists, chapter));
+  currentChapter = chapter;
+  toggleWaiting('off');
 }
+
+async function getCodeAndComments(gists, chapter) {
+  for (let gist of gists) {
+    if (
+      gist.description.substring(0, gist.description.indexOf('.')) == chapter
+    ) {
+      for (let key of Object.keys(gist.files)) {
+        let file = gist.files[key];
+        if (!file.hasOwnProperty('raw_code')) {
+          file.raw_code = await apiGetText(file.raw_url);
+        }
+      }
+      if (gist.comments > 0 && !gist.hasOwnProperty('raw_comments')) {
+        gist.raw_comments = await apiGetJson(gist.comments_url);
+      }
+    }
+  }
+}
+
+function prepareChapterGists(gists, chapter) {
+  return gists.filter(
+    a => a.description.substring(0, a.description.indexOf('.')) == chapter
+  );
+}
+
+// init
+(async () => {
+  gists = await getGists(gistsURL);
+  enableMenu(gists);
+  await loadChapter(currentChapter, false);
+})();

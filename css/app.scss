@@ -1,6 +1,8 @@
 @import 'typography';
 @import 'github-gist';
-.menu, .navbar {
+@import 'waiting';
+.menu,
+.navbar {
   max-width: 1200px;
   overflow: hidden;
   width: 100%;
@@ -23,11 +25,13 @@ a {
 a:hover {
   color: #df5000;
 }
-a.active, a.active:hover {
+a.active,
+a.active:hover {
   color: #63a35c;
   cursor: unset;
 }
-a.inactive, a.inactive:hover {
+a.inactive,
+a.inactive:hover {
   color: #aaaaaa;
   cursor: unset;
 }
@@ -48,4 +52,9 @@ nav a {
 }
 .collapsed a {
   transition: line-height 0.5s ease-in-out 0.25s, opacity 0.5s ease-in-out;
+}
+.hidden {
+  display: none;
+  // height: 0px;
+  // transition: height 2s ease-in-out;
 }

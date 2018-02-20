@@ -55,6 +55,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/waiting.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/docs\/css\/waiting.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/docs": {
 		"ft": 65536,
 		"oA": 1,
@@ -74,6 +87,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/docs\/js\/app.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/js\/polyfills.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/docs\/js\/polyfills.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -106,7 +129,7 @@
 	"displayValue": "eloquent-javascript-solutions",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_orange",
-	"lastBuiltDate": 540484402
+	"lastBuiltDate": 540842482
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
