@@ -1,4 +1,6 @@
 const gistsURL = 'https://api.github.com/users/jonurry/gists';
+let gists = {};
+let currentChapter = 2;
 
 function createCodeElement(gist) {
   let solutionsElement = document.getElementById('solutions');
@@ -40,12 +42,50 @@ async function renderComments(comments, id) {
   }
 }
 
+async function renderChapter(chapter, menuToggle = true) {
+  document.getElementById('solutions').innerHTML = '';
+  let chapterGists = gists.filter(a => 
+    a.description.substring(0, a.description.indexOf('.')) == chapter
+  );
+  for (let gist of chapterGists) {
+    let e = createCodeElement(gist);
+    let codeURL = gist.files[Object.keys(gist.files)[0]].raw_url;
+    let code = await apiGetText(codeURL);
+    await renderCode(code, e);
+    if (gist.comments > 0) {
+      let comments = await apiGetJson(gist.comments_url);
+      await renderComments(comments, gist.id);
+    }
+  }
+  if (currentChapter !== chapter) {
+    document.getElementById('nav-chapter-' + currentChapter).classList.remove('active');
+    document.getElementById('nav-chapter-' + chapter).classList.add('active');
+    currentChapter = chapter;
+  }
+  if (menuToggle) {
+    toggleMenu();
+  };
+}
+
+async function enableChaptersMenu() {
+  let chapterRef = 0;
+  for (let gist of gists) {
+    let chapter = gist.description.substring(0, gist.description.indexOf('.'));
+    if (chapter != chapterRef) {
+      let menuElement = document.getElementById('nav-chapter-' + chapter);
+      menuElement.classList.remove('inactive');
+      menuElement.onclick = function() {renderChapter(chapter);};
+      chapterRef = chapter;
+    }
+  }
+}
+
 async function render() {
   try {
     // get all of my code gists from github
-    let gists = await apiGetJson(gistsURL);
+    gists = await apiGetJson(gistsURL);
     // only keep gists relating to (Eloquent JavaScript Solutions)
-    gists.filter(a =>
+    gists = gists.filter(a =>
       a.description.includes('(Eloquent JavaScript Solutions)')
     );
     // sort the remaining gists by exercise number
@@ -54,16 +94,8 @@ async function render() {
       if (a.description > b.description) return 1;
       return 0;
     });
-    for (let gist of gists) {
-      let e = createCodeElement(gist);
-      let codeURL = gist.files[Object.keys(gist.files)[0]].raw_url;
-      let code = await apiGetText(codeURL);
-      await renderCode(code, e);
-      if (gist.comments > 0) {
-        let comments = await apiGetJson(gist.comments_url);
-        await renderComments(comments, gist.id);
-      }
-    }
+    enableChaptersMenu();
+    renderChapter(currentChapter, false);
   } catch (error) {
     console.log(error.message);
   }
@@ -72,3 +104,7 @@ async function render() {
 (async () => {
   await render();
 })();
+
+function toggleMenu() {
+  document.getElementsByTagName('nav')[0].classList.toggle('collapsed');
+}

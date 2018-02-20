@@ -8,7 +8,7 @@
   <title>Eloquent JavaScript Solutions - 3rd Edition.</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-000000000-0&ckcachebust=540485383"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-000000000-0&ckcachebust=540815286"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -19,41 +19,69 @@
   </script>
 
   <!-- Main CSS -->
-  <link rel="stylesheet" href="css/app.css?ckcachebust=f37712856f6d5992ea1c39d221005c76">
+  <link rel="stylesheet" href="css/app.css?ckcachebust=3aabf4fda5044fffe3bf9c838195cbff">
   <!-- Favicons -->
-  <link rel="shortcut icon" href="img/favicons/favicon.ico?ckcachebust=540485383" type="image/x-icon">
-  <link rel="icon" href="img/favicons/favicon.ico?ckcachebust=540485383" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png?ckcachebust=540485383">
-  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png?ckcachebust=540485383">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png?ckcachebust=540485383">
-  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png?ckcachebust=540485383">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png?ckcachebust=540485383">
-  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png?ckcachebust=540485383">
-  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png?ckcachebust=540485383">
-  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png?ckcachebust=540485383">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png?ckcachebust=540485383">
-  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png?ckcachebust=540485383">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png?ckcachebust=540485383">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png?ckcachebust=540485383">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png?ckcachebust=540485383">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico?ckcachebust=540815286" type="image/x-icon">
+  <link rel="icon" href="img/favicons/favicon.ico?ckcachebust=540815286" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png?ckcachebust=540815286">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png?ckcachebust=540815286">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png?ckcachebust=540815286">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png?ckcachebust=540815286">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png?ckcachebust=540815286">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png?ckcachebust=540815286">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png?ckcachebust=540815286">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png?ckcachebust=540815286">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png?ckcachebust=540815286">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png?ckcachebust=540815286">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png?ckcachebust=540815286">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png?ckcachebust=540815286">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png?ckcachebust=540815286">
   <!-- Manifest -->
-  <link rel="manifest" href="manifest.json?ckcachebust=540485383">
+  <link rel="manifest" href="manifest.json?ckcachebust=540815286">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-  <h1 class="title">Eloquent JavaScript Solutions - 3rd Edition</h1>
-  <p>Personal solutions to the exercises and problems set in the 3rd edition of eloquent javascript by Marijn Haverbeke.</p>
-  <section id="solutions"></section>
+  <header>
+    <div class="menu"><a onclick="toggleMenu()">&#9776; Chapters</a></div>
+    <nav class="navbar collapsed">
+      <a id="nav-chapter-2" class="active">Program Structure</a>
+      <a id="nav-chapter-3" class="inactive">Functions</a>
+      <a id="nav-chapter-4" class="inactive">Data Structures: Objects and Arrays</a>
+      <a id="nav-chapter-5" class="inactive">Higher-order Functions</a>
+      <a id="nav-chapter-6" class="inactive">The Secret Life of Objects</a>
+      <a id="nav-chapter-7" class="inactive">Project: A Robot</a>
+      <a id="nav-chapter-8" class="inactive">Bugs and Errors</a>
+      <a id="nav-chapter-9" class="inactive">Regular Expressions</a>
+      <a id="nav-chapter-10" class="inactive">Modules</a>
+      <a id="nav-chapter-11" class="inactive">Asynchronous Programming</a>
+      <a id="nav-chapter-12" class="inactive">Project: A Programming Language</a>
+      <a id="nav-chapter-13" class="inactive">JavaScript and the Browser</a>
+      <a id="nav-chapter-14" class="inactive">The Document Object Model</a>
+      <a id="nav-chapter-15" class="inactive">Handling Events</a>
+      <a id="nav-chapter-16" class="inactive">Project: A Platform Game</a>
+      <a id="nav-chapter-17" class="inactive">Drawing on Canvas</a>
+      <a id="nav-chapter-18" class="inactive">HTTP and Forms</a>
+      <a id="nav-chapter-19" class="inactive">Project: A Pixel Art Editor</a>
+      <a id="nav-chapter-20" class="inactive">Node.js</a>
+      <a id="nav-chapter-21" class="inactive">Project: Skill-Sharing Website</a>
+    </nav>
+  </header>
+  <article>
+    <h1 class="title">Eloquent JavaScript Solutions - 3rd Edition</h1>
+    <p>These are <a href="http://jon.urry.me"><b>Jon Urry</b></a>'s solutions to the exercises and problems set in the 3rd edition of eloquent javascript by Marijn Haverbeke.</p>
+    <p>The official solutions can be found here: <a href="https://github.com/marijnh/Eloquent-JavaScript/tree/3rd/code/solutions">Eloquent JavaScript Soultions 3rd Edition</a></p>
+    <section id="solutions"></section>
+  </article>
   <!-- JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js?ckcachebust=540485383" integrity="sha256-WRc/eG3R84AverJv0zmqxAmdwQxstUpqkiE+avJ3WSo="
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js?ckcachebust=540815286" integrity="sha256-WRc/eG3R84AverJv0zmqxAmdwQxstUpqkiE+avJ3WSo="
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.12/marked.min.js?ckcachebust=540485383" integrity="sha256-i/tXAK6uqBpeOGsDc/sLNo5aCxJTE3pfnXlNPK+FV30="
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.12/marked.min.js?ckcachebust=540815286" integrity="sha256-i/tXAK6uqBpeOGsDc/sLNo5aCxJTE3pfnXlNPK+FV30="
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js?ckcachebust=540485383"></script>
-  <script src="js/app.js?ckcachebust=db8fbc0d81eb49cb7847694d2bf8127b"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js?ckcachebust=540815286"></script>
+  <script src="js/app.js?ckcachebust=7eb049daa37693c6262d98b2dd5fee1a"></script>
 </body>
 
 </html>
