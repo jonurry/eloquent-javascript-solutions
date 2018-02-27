@@ -5,8 +5,9 @@
 // @codekit-prepend "controller.js";
 
 (async (root = window) => {
-  let model = root.EJSS3.model;
-  let view = root.EJSS3.view;
-  let controller = root.EJSS3.controller;
+  let api = root.EJSS3.createAPI();
+  let model = root.EJSS3.createModel(api);
+  let view = root.EJSS3.createView();
+  let controller = root.EJSS3.createController();
   await controller.init(model, view);
 })(this);
