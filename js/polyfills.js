@@ -10,16 +10,16 @@
       writable: true,
       value: function prepend() {
         var argArr = Array.prototype.slice.call(arguments),
-          docFrag = document.createDocumentFragment();
+          docFragment = document.createDocumentFragment();
 
         argArr.forEach(function(argItem) {
           var isNode = argItem instanceof Node;
-          docFrag.appendChild(
+          docFragment.appendChild(
             isNode ? argItem : document.createTextNode(String(argItem))
           );
         });
 
-        this.insertBefore(docFrag, this.firstChild);
+        this.insertBefore(docFragment, this.firstChild);
       }
     });
   });

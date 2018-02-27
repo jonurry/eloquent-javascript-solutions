@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "26268",
 "files": {
+	"\/.vscode\/settings.json": {
+		"ft": 524288,
+		"oA": 0,
+		"oAP": "\/docs\/.vscode\/settings.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/CNAME": {
 		"cB": 0,
 		"ft": 8192,
@@ -30,7 +38,7 @@
 		"uL": 1
 		},
 	"\/css\/github-gist.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -38,12 +46,12 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/docs\/css\/github-gist.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0,
 		"uL": 1
 		},
 	"\/css\/typography.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -51,12 +59,12 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/docs\/css\/typography.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0,
 		"uL": 1
 		},
 	"\/css\/waiting.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -64,7 +72,7 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/docs\/css\/waiting.css",
-		"oF": 0,
+		"oF": 1,
 		"oS": 0,
 		"uL": 1
 		},
@@ -81,6 +89,16 @@
 		"oAP": "\/docs\/index.html",
 		"oF": 0
 		},
+	"\/js\/api.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/docs\/js\/api.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/js\/app.js": {
 		"ft": 64,
 		"ma": 1,
@@ -91,13 +109,43 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"\/js\/controller.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/docs\/js\/controller.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/js\/model.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/docs\/js\/model.js",
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/js\/polyfills.js": {
 		"ft": 64,
 		"ma": 1,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/docs\/js\/polyfills.js",
-		"oF": 0,
+		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/js\/view.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/docs\/js\/view.js",
+		"oF": 1,
 		"sC": 3,
 		"tS": 1
 		},
@@ -129,7 +177,7 @@
 	"displayValue": "eloquent-javascript-solutions",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_orange",
-	"lastBuiltDate": 540842482
+	"lastBuiltDate": 541424406
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
