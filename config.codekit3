@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26330",
 "files": {
+	"\/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/docs\/.gitignore",
+		"oF": 0
+		},
 	"\/.vscode\/settings.json": {
 		"ft": 524288,
 		"oA": 0,
@@ -139,6 +146,16 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"\/js\/scratchpad.js": {
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/docs\/js\/scratchpad.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"\/js\/view.js": {
 		"ft": 64,
 		"ma": 1,
@@ -177,7 +194,7 @@
 	"displayValue": "eloquent-javascript-solutions",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_orange",
-	"lastBuiltDate": 541440576
+	"lastBuiltDate": 543830135
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
