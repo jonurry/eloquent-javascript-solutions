@@ -1,49 +1,30 @@
-(function(root = window) {
-  function createController() {
-    // private
-    let currentChapter = 2;
-    let model = {};
-    let view = {};
-
-    async function loadChapter(chapter, menuToggle = true) {
-      let chapterGists = {};
-      view.clearSolution();
-      view.toggleWaiting('on');
-      view.updateActiveMenuItem(currentChapter, chapter);
-      if (menuToggle) {
-        view.toggleMenu();
-      }
-      chapterGists = await model.loadChapter(chapter);
-      view.renderChapter(chapterGists);
-      currentChapter = chapter;
-      view.toggleWaiting('off');
-    }
-
-    // public
-    async function init(appModel, appView) {
-      model = appModel;
-      view = appView;
-      await model.loadGists();
-      await view.setupMenu(model.getGists(), loadChapter);
-      await loadChapter(currentChapter, false);
-    }
-
-    // export public api
-    return {
-      init: init
-    };
+class Controller {
+  constructor(model, view) {
+    this.currentChapter = 2;
+    this.model = model;
+    this.view = view;
   }
-
-  // Export to root (window in browser)
-  if (typeof define === 'function' && define.amd) {
-    // requireJS
-  } else if (typeof exports === 'object') {
-    // Node.js
-    module.exports.controller = createController;
-  } else {
-    // in the browser
-    root = root || {};
-    root.EJSS3 = root.EJSS3 || {};
-    root.EJSS3.createController = createController;
+  async initialise() {
+    await this.model.loadGists();
+    await this.view.setupMenu(
+      this.model.getGists(),
+      this.loadChapter.bind(this)
+    );
+    await this.loadChapter(this.currentChapter, false);
   }
-})(this);
+  async loadChapter(chapter, menuToggle = true) {
+    let chapterGists = {};
+    this.view.clearSolution();
+    this.view.toggleWaiting('on');
+    this.view.updateActiveMenuItem(this.currentChapter, chapter);
+    if (menuToggle) {
+      this.view.toggleMenu();
+    }
+    chapterGists = await this.model.loadChapter(chapter);
+    this.view.renderChapter(chapterGists);
+    this.currentChapter = chapter;
+    this.view.toggleWaiting('off');
+  }
+}
+
+export default Controller;

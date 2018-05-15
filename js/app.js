@@ -1,13 +1,12 @@
-// @codekit-prepend "polyfills.js";
-// @codekit-prepend "api.js";
-// @codekit-prepend "model.js";
-// @codekit-prepend "view.js";
-// @codekit-prepend "controller.js";
+import Api from './api.js';
+import Model from './model.js';
+import View from './view.js';
+import Controller from './controller.js';
 
-(async (root = window) => {
-  let api = root.EJSS3.createAPI();
-  let model = root.EJSS3.createModel(api);
-  let view = root.EJSS3.createView();
-  let controller = root.EJSS3.createController();
-  await controller.init(model, view);
-})(this);
+(async () => {
+  let api = new Api();
+  let model = new Model(api);
+  let view = new View(hljs);
+  let controller = new Controller(model, view);
+  controller.initialise();
+})();

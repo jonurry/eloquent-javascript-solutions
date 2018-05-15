@@ -94,7 +94,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.12/marked.min.js" integrity="sha256-i/tXAK6uqBpeOGsDc/sLNo5aCxJTE3pfnXlNPK+FV30="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="./js/polyfills.js"></script>
+  <!-- Load ES6 Modules -->
+  <script type="module" src="./js/app.js"></script>
+  <!-- Fallback if ES6 Modules are not supported -->
+  <script nomodule src="./js/api.js"></script>
+  <script nomodule src="./js/model.js"></script>
+  <script nomodule src="./js/view.js"></script>
+  <script nomodule src="./js/controller.js"></script>
+  <script nomodule src="./js/app.js"></script>
 </body>
 
 </html>

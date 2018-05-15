@@ -12,32 +12,32 @@
 	"\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/docs\/.gitignore",
-		"oF": 0
+		"oF": 1
 		},
 	"\/.vscode\/launch.json": {
 		"ft": 524288,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/docs\/.vscode\/launch.json",
-		"oF": 0,
+		"oF": 1,
 		"oO": 0,
 		"oS": 1
 		},
 	"\/.vscode\/settings.json": {
 		"ft": 524288,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/docs\/.vscode\/settings.json",
-		"oF": 0,
+		"oF": 1,
 		"oO": 0,
 		"oS": 1
 		},
 	"\/browserconfig.xml": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/docs\/browserconfig.xml",
-		"oF": 0
+		"oF": 1
 		},
 	"\/CNAME": {
 		"cB": 0,
@@ -395,8 +395,8 @@
 		},
 	"\/js\/api.js": {
 		"ft": 64,
-		"ma": 1,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 1,
 		"oAP": "\/docs\/js\/api.js",
 		"oF": 1,
@@ -405,18 +405,18 @@
 		},
 	"\/js\/app.js": {
 		"ft": 64,
-		"ma": 1,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/docs\/js\/app.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 1
+		"tS": 0
 		},
 	"\/js\/controller.js": {
 		"ft": 64,
-		"ma": 1,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 1,
 		"oAP": "\/docs\/js\/controller.js",
 		"oF": 1,
@@ -425,8 +425,8 @@
 		},
 	"\/js\/model.js": {
 		"ft": 64,
-		"ma": 1,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 1,
 		"oAP": "\/docs\/js\/model.js",
 		"oF": 1,
@@ -435,8 +435,8 @@
 		},
 	"\/js\/polyfills.js": {
 		"ft": 64,
-		"ma": 1,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 1,
 		"oAP": "\/docs\/js\/polyfills.js",
 		"oF": 1,
@@ -445,8 +445,8 @@
 		},
 	"\/js\/scratchpad.js": {
 		"ft": 64,
-		"ma": 1,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 1,
 		"oAP": "\/docs\/js\/scratchpad.js",
 		"oF": 1,
@@ -455,8 +455,8 @@
 		},
 	"\/js\/view.js": {
 		"ft": 64,
-		"ma": 1,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 1,
 		"oAP": "\/docs\/js\/view.js",
 		"oF": 1,
@@ -465,9 +465,9 @@
 		},
 	"\/manifest.json": {
 		"ft": 524288,
-		"oA": 0,
+		"oA": 2,
 		"oAP": "\/docs\/manifest.json",
-		"oF": 0,
+		"oF": 1,
 		"oO": 0,
 		"oS": 1
 		},
@@ -500,7 +500,7 @@
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_orange",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 548003205
+	"lastBuiltDate": 548071173
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -711,7 +711,7 @@
 			"active": 0
 			},
 		"syntax-async-generators": {
-			"active": 1
+			"active": 0
 			},
 		"syntax-class-properties": {
 			"active": 0
@@ -2313,8 +2313,8 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"createSourceMap": 1,
-		"minifyOutput": 1,
+		"createSourceMap": 0,
+		"minifyOutput": 0,
 		"syntaxCheckerStyle": 3,
 		"transpilerStyle": 1
 		},
