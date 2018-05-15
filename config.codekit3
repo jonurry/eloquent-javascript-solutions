@@ -7,7 +7,7 @@
 		"uuidString": "D2976304-C74C-4C62-9340-584E0C756F3D"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -16,6 +16,14 @@
 		"oAP": "\/docs\/.gitignore",
 		"oF": 0
 		},
+	"\/.vscode\/launch.json": {
+		"ft": 524288,
+		"oA": 0,
+		"oAP": "\/docs\/.vscode\/launch.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/.vscode\/settings.json": {
 		"ft": 524288,
 		"oA": 0,
@@ -23,6 +31,13 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"\/browserconfig.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/docs\/browserconfig.xml",
+		"oF": 0
 		},
 	"\/CNAME": {
 		"cB": 0,
@@ -89,6 +104,288 @@
 		"oAP": "\/docs\/docs",
 		"oF": 0
 		},
+	"\/img\/android-icon-144x144.png": {
+		"ft": 32768,
+		"iS": 9113,
+		"oA": 0,
+		"oAP": "\/docs\/img\/android-icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/android-icon-192x192.png": {
+		"ft": 32768,
+		"iS": 10859,
+		"oA": 0,
+		"oAP": "\/docs\/img\/android-icon-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/android-icon-36x36.png": {
+		"ft": 32768,
+		"iS": 2185,
+		"oA": 0,
+		"oAP": "\/docs\/img\/android-icon-36x36.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/android-icon-48x48.png": {
+		"ft": 32768,
+		"iS": 3136,
+		"oA": 0,
+		"oAP": "\/docs\/img\/android-icon-48x48.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/android-icon-72x72.png": {
+		"ft": 32768,
+		"iS": 4410,
+		"oA": 0,
+		"oAP": "\/docs\/img\/android-icon-72x72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/android-icon-96x96.png": {
+		"ft": 32768,
+		"iS": 5824,
+		"oA": 0,
+		"oAP": "\/docs\/img\/android-icon-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-114x114.png": {
+		"ft": 32768,
+		"iS": 7125,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-114x114.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-120x120.png": {
+		"ft": 32768,
+		"iS": 7337,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-120x120.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-144x144.png": {
+		"ft": 32768,
+		"iS": 9113,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-152x152.png": {
+		"ft": 32768,
+		"iS": 9621,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-152x152.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-180x180.png": {
+		"ft": 32768,
+		"iS": 11635,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-180x180.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-57x57.png": {
+		"ft": 32768,
+		"iS": 3547,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-57x57.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-60x60.png": {
+		"ft": 32768,
+		"iS": 3729,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-60x60.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-72x72.png": {
+		"ft": 32768,
+		"iS": 4410,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-72x72.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-76x76.png": {
+		"ft": 32768,
+		"iS": 4634,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-76x76.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon-precomposed.png": {
+		"ft": 32768,
+		"iS": 11435,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon-precomposed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/apple-icon.png": {
+		"ft": 32768,
+		"iS": 11435,
+		"oA": 0,
+		"oAP": "\/docs\/img\/apple-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/Eloquent JavaScript Solutions.png": {
+		"ft": 32768,
+		"iS": 69824,
+		"oA": 0,
+		"oAP": "\/docs\/img\/Eloquent JavaScript Solutions.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 1308,
+		"oA": 0,
+		"oAP": "\/docs\/img\/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 2087,
+		"oA": 0,
+		"oAP": "\/docs\/img\/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/favicon-96x96.png": {
+		"ft": 32768,
+		"iS": 5824,
+		"oA": 0,
+		"oAP": "\/docs\/img\/favicon-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/docs\/img\/favicon.ico",
+		"oF": 0
+		},
+	"\/img\/ms-icon-144x144.png": {
+		"ft": 32768,
+		"iS": 9113,
+		"oA": 0,
+		"oAP": "\/docs\/img\/ms-icon-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/ms-icon-150x150.png": {
+		"ft": 32768,
+		"iS": 9472,
+		"oA": 0,
+		"oAP": "\/docs\/img\/ms-icon-150x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/ms-icon-310x310.png": {
+		"ft": 32768,
+		"iS": 25978,
+		"oA": 0,
+		"oAP": "\/docs\/img\/ms-icon-310x310.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/img\/ms-icon-70x70.png": {
+		"ft": 32768,
+		"iS": 4173,
+		"oA": 0,
+		"oAP": "\/docs\/img\/ms-icon-70x70.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/index.html": {
 		"cB": 1,
 		"ft": 8192,
@@ -150,9 +447,9 @@
 		"ft": 64,
 		"ma": 1,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/docs\/js\/scratchpad.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 1
 		},
@@ -165,6 +462,14 @@
 		"oF": 1,
 		"sC": 3,
 		"tS": 1
+		},
+	"\/manifest.json": {
+		"ft": 524288,
+		"oA": 0,
+		"oAP": "\/docs\/manifest.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"\/README.md": {
 		"cB": 0,
@@ -194,7 +499,8 @@
 	"displayValue": "eloquent-javascript-solutions",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_orange",
-	"lastBuiltDate": 543830135
+	"iconImageWasSetByUser": 0,
+	"lastBuiltDate": 548003205
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1997,6 +2303,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
